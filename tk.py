@@ -44,7 +44,7 @@ def salvar_nome():
 
 janela = tk.Tk()
 janela.title("Cadastro de Nomes")
-janela.geometry("300x500")
+janela.geometry("300x300")
 
 
 rotulo = tk.Label(janela, text="Digite o nome:")

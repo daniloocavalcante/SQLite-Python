@@ -72,7 +72,6 @@ def salvar():
         messagebox.showwarning("Atenção", "Digite um cep antes de salvar!")
         return
 
-
     if registro_atual_id is None:
         
         cur.execute(
@@ -162,7 +161,7 @@ def atualizar_botoes():
 
 janela = tk.Tk()
 janela.title("Cadastro de Nomes - CRUD")
-janela.geometry("520x380")
+janela.geometry("560x380")
 
 frm_form = tk.Frame(janela)
 frm_form.pack(fill="x", padx=10, pady=8)
@@ -208,6 +207,8 @@ frm_tab.pack(fill="both", expand=True, padx=10, pady=4)
 tabela = ttk.Treeview(frm_tab, columns=("id", "nome","endereco", "cep"), show="headings", height=10)
 tabela.heading("id", text="ID")
 tabela.heading("nome", text="Nome")
+tabela.heading("endereco", text="Endereco")
+tabela.heading("cep", text="CEP")
 tabela.column("id", width=60, anchor="center")
 tabela.column("nome", width=60, anchor="w")
 tabela.column("endereco", width=60, anchor="w")
